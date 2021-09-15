@@ -10,13 +10,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          <Route path="/"><Home /></Route>
-          <Route path="/question1"><Question1 /></Route>
-          <Route path="/question2"><Question2 /></Route>
-          <Route path="/question3"><Question3 /></Route>
-          <Route path="/thankyou"><Thanks /></Route>
-        </Switch>
+        <div className="blur">
+          <Switch>
+            <Route exact path="/"><Home /></Route>
+            <Route path="/question1"><Question1 /></Route>
+            <Route path="/question2"><Question2 /></Route>
+            <Route path="/question3"><Question3 /></Route>
+            <Route path="/thankyou"><Thanks /></Route>
+          </Switch>
+        </div>
       </div>
     </Router>
     

@@ -1,3 +1,23 @@
 .App {
+  height:100vh;
+  width:100vw;
   text-align: center;
+  background-image: url('./assets/ant-rozetsky-HXOllTSwrpM-unsplash.png');
+  background-position: center;
+  background-size: cover;
+}
+.blur {
+  backdrop-filter: blur(20px);
+  -moz-backdrop-filter: blur(20px);
+  padding: 5% 10%;
+}
+.dataWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7px;
+}
+.itemWrapper {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
 }

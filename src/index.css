@@ -1,10 +1,20 @@
 @font-face {
-  font-family: "GoldmanBold";
-  src: local("GoldmanBold"),
-   url("./fonts/Inter.ttf") format("truetype");
+  font-family: "Inter";
+  src: url("./fonts/Inter.ttf") format("truetype");
+  }
+  html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    max-height: 100vh;
   }
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100%;
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
