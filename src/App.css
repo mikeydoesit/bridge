@@ -1,23 +1,300 @@
 .App {
-  height:100vh;
-  width:100vw;
-  text-align: center;
+  height: 800px;
+  width: 1280px;
   background-image: url('./assets/ant-rozetsky-HXOllTSwrpM-unsplash.png');
   background-position: center;
   background-size: cover;
+  
 }
 .blur {
-  backdrop-filter: blur(20px);
-  -moz-backdrop-filter: blur(20px);
-  padding: 5% 10%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(9px);
+  -moz-backdrop-filter: blur(9px);
 }
 .dataWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 7px;
+  grid-gap: 32px 16px;
+  padding: 56px 138px 217px;
 }
 .itemWrapper {
   background-color: #fff;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 36px;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 20px 16px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.itemWrapper:hover {
+  background-color: #5F259F;
+  color:#fff;
+}
+.itemWrapper:hover .estimate span{
+  color: #9671C0;
+}
+.itemWrapper:hover .estimate .amount{
+  color: #fff;
+}
+.itemWrapper:hover .checkmark svg{
+  fill: #fff;
+}
+.itemWrapper:hover .title{
+  color: #fff;
+}
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #DB2F20;
+  padding-top: 114px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title {
+  font-size: 16px;
+  color: #5f259f;
+  line-height: 20px;
+}
+.checkmark {
+  height: 32px;
+  width: 32px;
+}
+.checkmark svg{
+  fill: #5f259f;
+}
+.estimate {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.estimate span {
+  font-size: 12px;
+  line-height: 15px;
+  color: #c7b3dd;
+  font-weight: bold;
+}
+.estimate .amount {
+  color: #5f259f;
+  line-height: 15px;
+  font-size: 12px;
+  text-align: center;
+}
+.totalWrapper {
+  background-color: #fff;
+  padding: 18px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 36px;
+}
+.total {
+  color: #5F259F;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.totalAmount {
+  color: #DB2F20;
+  line-height: 34px;
+  font-size: 28px;
+}
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.continueBtn, .goBackBtn {
+  background-color: #DB2F20;
+  width: fit-content;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+}
+.continueBtn span {
+  padding-right: 34px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+.continueBtn img{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+
+
+
+
+.mainQuestionWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 147px;
+}
+.questionWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  font-size: 32px;
+  color: #DB2F20;
+  width: 494px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 43px;
+  text-align: center;
+}
+.questionNav {
+  background-color: #DB2F20;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.questionNavChevron {
+  fill:none;
+  stroke:#fff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width:3px;
+}
+.inputWrapper{
+  width: 160px;
+  margin-left: 150px;
+}
+.inputWrapper input{
+  width: 112px;
+  height: 29px;
+  border: 0;
+  padding: 18px 24px 17px 24px;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  line-height: 29px;
+  font-size: 24px;
+  color: #979797;
+}
+
+
+.dashboardWrapper {
+  padding: 117px 40px 0 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dashboardWrapper .leftDash {
+  width: 576px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dashboardWrapper .leftDash .boldText {
+  color: #DB2F20;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+}
+.dashboardWrapper .leftDash p {
+  color: #2B2B2B;
+  font-size: 16px;
+  text-align: left;
+  padding-top: 21px;
+}
+.goBackBtn img{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  transform: rotate(180deg);
+}
+.goBackBtn span{
+  padding-left: 34px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+.backBtnWrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.dashItem, .dashTotal {
+  width: 576px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 8px;
+}
+.dashItemTitle {
+  background-color: #fff;
+  width: 396px;
+  padding: 10px 24px;
+  text-align: left;
+  line-height: 20px;
+  font-size: 16px;
+  border-radius: 20px 0 0 20px;
+}
+.dashItemAmount {
+  background-color: #DB2F20;
+  display: flex;
+  text-align: left;
+  padding-left: 20px;
+  align-items: center;
+  color: #fff;
+  width: 132px;
+  border-radius: 0 20px 20px 0;
+}
+.dashTotalTitle {
+  background-color:#5F259F;
+  color: #fff;
+  width: 396px;
+  padding: 10px 24px;
+  text-align: left;
+  line-height: 20px;
+  font-size: 16px;
+  border-radius: 20px 0 0 20px;
+}
+.dashTotalAmount {
+  background-color: #fff;
+  color:#5F259F;
+  width: 132px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  text-align: left;
+  padding-left: 20px;
+  align-items: center;
+}
+.sendReportWrapper {
+  margin-top: 42px;
+  background-color: #DB2F20;
+  text-align: left;
+  color: #fff;
+  display: inline-block;
+  border-radius: 20px;
+}
+.sendReport {
+  padding: 8px 24px;
+  line-height: 24px;
+  font-size: 20px;
 }
